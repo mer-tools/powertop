@@ -1,7 +1,8 @@
 Name       : powertop
-Version    : 2.1.1
+Version    : 2.4
 Release    : 1
 Group      : Applications/System
+URL        : https://01.org/powertop/
 Summary    : PowerTop is tool that is used for power diagnostics
 Description: |
     PowerTop is tool that detects which Linux programs
