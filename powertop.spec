@@ -21,6 +21,7 @@ BuildRequires:  pkgconfig(ncursesw)
 BuildRequires:  gettext
 BuildRequires:  intltool
 BuildRequires:  libnl-devel
+Patch0:     0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 
 %description
 PowerTop is tool that detects which Linux programs
@@ -37,6 +38,7 @@ laptop.
 %setup -q -n src
 
 # >> setup
+%patch0 -p1
 # << setup
 
 %build
