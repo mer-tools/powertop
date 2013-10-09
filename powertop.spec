@@ -57,6 +57,8 @@ rm -rf %{buildroot}
 %make_install
 
 # >> install post
+mv %{buildroot}/usr/sbin/powertop %{buildroot}/usr/sbin/powertop-original
+install -m 755 powertop.sh %{buildroot}/usr/sbin/powertop
 # << install post
 
 %find_lang powertop
@@ -65,6 +67,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc COPYING
 %doc /usr/share/man/man8/powertop.8.gz
+%{_sbindir}/powertop-original
 %{_sbindir}/powertop
 # >> files
 # << files
