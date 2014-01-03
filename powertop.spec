@@ -9,7 +9,7 @@ Name:       powertop
 # << macros
 
 Summary:    PowerTop is tool that is used for power diagnostics
-Version:    2.4
+Version:    2.5
 Release:    1
 Group:      Applications/System
 License:    GPLv2
