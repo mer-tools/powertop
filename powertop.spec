@@ -9,19 +9,19 @@ Name:       powertop
 # << macros
 
 Summary:    PowerTop is tool that is used for power diagnostics
-Version:    2.5
+Version:    2.6
 Release:    1
 Group:      Applications/System
 License:    GPLv2
 URL:        https://01.org/powertop/
-Source0:    powertop-v%{version}.tar.bz2
+Source0:    powertop-%{version}.tar.bz2
 Source100:  powertop.yaml
+Patch0:     0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 BuildRequires:  pkgconfig(libpci)
 BuildRequires:  pkgconfig(ncursesw)
 BuildRequires:  gettext
 BuildRequires:  intltool
 BuildRequires:  libnl-devel
-Patch0:     0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 
 %description
 PowerTop is tool that detects which Linux programs
@@ -35,10 +35,11 @@ laptop.
 
 
 %prep
-%setup -q -n src
+%setup -q -n %{name}-%{version}
 
-# >> setup
+# 0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 %patch0 -p1
+# >> setup
 # << setup
 
 %build
@@ -47,7 +48,7 @@ laptop.
 # << build pre
 
 %configure --disable-static
-make %{?jobs:-j%jobs}
+make %{?_smp_mflags}
 
 # >> build post
 # << build post

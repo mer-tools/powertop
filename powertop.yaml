@@ -1,5 +1,5 @@
 Name       : powertop
-Version    : 2.5
+Version    : 2.6
 Release    : 1
 Group      : Applications/System
 URL        : https://01.org/powertop/
@@ -13,9 +13,10 @@ Description: |
     savings in the tool. You'll also see the estimated
     time left for battery power if you are running a
     laptop.
+Patches:
+    - 0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 Sources    : 
-    - powertop-v%{version}.tar.bz2
-
+    - powertop-%{version}.tar.bz2
 License: GPLv2
 PkgConfigBR:
     - libpci
@@ -27,4 +28,5 @@ PkgBR:
 Files:
     - "%doc COPYING"
     - "%doc /usr/share/man/man8/powertop.8.gz"
+    - "%{_sbindir}/powertop-original"
     - "%{_sbindir}/powertop"
