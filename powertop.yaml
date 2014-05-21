@@ -21,12 +21,11 @@ SourcePrefix:
     - src
 License: GPLv2
 PkgConfigBR:
-    - libpci
     - ncursesw
+    - libnl-3.0
 PkgBR:
     - gettext
     - intltool
-    - libnl-devel
 Files:
     - "%doc COPYING"
     - "%doc /usr/share/man/man8/powertop.8.gz"

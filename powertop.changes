@@ -1,4 +1,5 @@
 * Wed May 21 2014 Matti Kosola <matti.kosola@jollamobile.com> - 2.6
+- Remove pciutils dependency
 - Fix yaml file
 - Upgrade to upstream version 2.6
 

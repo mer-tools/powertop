@@ -17,11 +17,10 @@ URL:        https://01.org/powertop/
 Source0:    powertop-%{version}.tar.bz2
 Source100:  powertop.yaml
 Patch0:     0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
-BuildRequires:  pkgconfig(libpci)
 BuildRequires:  pkgconfig(ncursesw)
+BuildRequires:  pkgconfig(libnl-3.0)
 BuildRequires:  gettext
 BuildRequires:  intltool
-BuildRequires:  libnl-devel
 
 %description
 PowerTop is tool that detects which Linux programs
