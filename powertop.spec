@@ -35,7 +35,7 @@ laptop.
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n src
 
 # 0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 %patch0 -p1

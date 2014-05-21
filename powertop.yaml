@@ -17,6 +17,8 @@ Patches:
     - 0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 Sources    : 
     - powertop-%{version}.tar.bz2
+SourcePrefix:
+    - src
 License: GPLv2
 PkgConfigBR:
     - libpci
