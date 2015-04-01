@@ -9,7 +9,7 @@ Name:       powertop
 # << macros
 
 Summary:    PowerTop is tool that is used for power diagnostics
-Version:    2.7
+Version:    2.7.1
 Release:    1
 Group:      Applications/System
 License:    GPLv2
@@ -17,6 +17,7 @@ URL:        https://01.org/powertop/
 Source0:    powertop-%{version}.tar.bz2
 Source100:  powertop.yaml
 Patch0:     0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
+Patch1:     0002-Baytrail-does-not-have-core-C7-MSR-to-read.patch
 BuildRequires:  pkgconfig(ncursesw)
 BuildRequires:  pkgconfig(libnl-3.0)
 BuildRequires:  gettext
@@ -38,6 +39,7 @@ laptop.
 
 # 0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 %patch0 -p1
+%patch1 -p1
 # >> setup
 # << setup
 
