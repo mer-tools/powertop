@@ -1,5 +1,5 @@
 * Wed Apr 01 2015 Matti Kosola <matti.kosola@jollamobile.com> - 2.7.1
-- Fix Powertop on Baytrail platform
+- Fix Powertop on Baytrail platform. Fixes MER#1251
 
 * Wed Nov 26 2014 Matti Kosola <matti.kosola@jollamobile.com> - 2.7
 - Upgrade to upstream version 2.7
