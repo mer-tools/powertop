@@ -1,0 +1,38 @@
+From e5e4a1c4495f08e44bbeb46ef6927094ab0d1c4b Mon Sep 17 00:00:00 2001
+From: Matti Kosola <matti.kosola@jolla.com>
+Date: Wed, 18 Sep 2019 11:39:22 +0000
+Subject: [PATCH] Fix undefine PATH_MAX compiler error
+
+Signed-off-by: Matti Kosola <matti.kosola@jolla.com>
+---
+ src/wakeup/wakeup_ethernet.h | 1 +
+ src/wakeup/wakeup_usb.h      | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/src/wakeup/wakeup_ethernet.h b/src/wakeup/wakeup_ethernet.h
+index 682bf95..75de198 100644
+--- a/src/wakeup/wakeup_ethernet.h
++++ b/src/wakeup/wakeup_ethernet.h
+@@ -26,6 +26,7 @@
+ #define _INCLUDE_GUARD_ETHERNET_WAKEUP_H
+ 
+ #include <vector>
++#include <linux/limits.h>
+ 
+ #include "wakeup.h"
+ 
+diff --git a/src/wakeup/wakeup_usb.h b/src/wakeup/wakeup_usb.h
+index f7a1f7e..c636855 100644
+--- a/src/wakeup/wakeup_usb.h
++++ b/src/wakeup/wakeup_usb.h
+@@ -26,6 +26,7 @@
+ #define _INCLUDE_GUARD_USB_WAKEUP_H
+ 
+ #include <vector>
++#include <linux/limits.h>
+ 
+ #include "wakeup.h"
+ 
+-- 
+1.8.3-rc3
+
