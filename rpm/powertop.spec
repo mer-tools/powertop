@@ -4,7 +4,7 @@ Version:    2.10
 Release:    1
 Group:      Applications/System
 License:    GPLv2
-URL:        https://01.org/powertop/
+URL:        https://github.com/mer-tools/powertop
 Source0:    powertop-%{version}.tar.bz2
 Patch0:     0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 Patch1:     0001-Fix-undefine-PATH_MAX-compiler-error.patch
