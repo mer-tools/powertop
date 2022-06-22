@@ -2,7 +2,6 @@ Name:       powertop
 Summary:    PowerTop is tool that is used for power diagnostics
 Version:    2.10
 Release:    1
-Group:      Applications/System
 License:    GPLv2
 URL:        https://github.com/mer-tools/powertop
 Source0:    powertop-%{version}.tar.bz2
