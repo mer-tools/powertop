@@ -1,6 +1,6 @@
 Name:       powertop
 Summary:    PowerTop is tool that is used for power diagnostics
-Version:    2.10
+Version:    2.15
 Release:    1
 License:    GPLv2
 URL:        https://github.com/mer-tools/powertop
@@ -9,8 +9,8 @@ Patch0:     0001-Disable-Qualcomm-mpdecision-binary-before-launching-.patch
 Patch1:     0001-Fix-undefine-PATH_MAX-compiler-error.patch
 BuildRequires:  pkgconfig(ncursesw)
 BuildRequires:  pkgconfig(libnl-3.0)
+BuildRequires:  autoconf-archive
 BuildRequires:  gettext
-BuildRequires:  intltool
 
 %description
 PowerTop is tool that detects which Linux programs
@@ -35,10 +35,9 @@ laptop.
 %autogen
 
 %configure --disable-static
-make %{?_smp_mflags}
+%make_build
 
 %install
-rm -rf %{buildroot}
 %make_install
 
 mv %{buildroot}/usr/sbin/powertop %{buildroot}/usr/sbin/powertop-original
@@ -48,7 +47,8 @@ install -m 755 powertop.sh %{buildroot}/usr/sbin/powertop
 
 %files -f powertop.lang
 %defattr(-,root,root,-)
-%doc COPYING
+%license COPYING
 %doc /usr/share/man/man8/powertop.8.gz
 %{_sbindir}/powertop-original
 %{_sbindir}/powertop
+%{_datadir}/bash-completion/completions/powertop
